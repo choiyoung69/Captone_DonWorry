@@ -16,6 +16,7 @@
         android:text="회원가입"
         android:textColor="@color/dark_gray"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,12 +43,11 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="비밀번호 확인"
         android:textColor="@color/dark_gray"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.557"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/InputPassword" />
 
@@ -69,11 +69,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
         android:text="전화번호"
         android:textColor="@color/dark_gray"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/InputRePassword" />
 
@@ -113,12 +112,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="비밀번호"
         android:textColor="@color/dark_gray"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.517"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/InputID" />
 
@@ -145,6 +143,8 @@
         android:layout_marginEnd="250dp"
         android:text="이름"
         android:textColor="@color/dark_gray"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,8 +152,8 @@
 
     <EditText
         android:id="@+id/InputRePassword"
-        android:layout_width="201dp"
-        android:layout_height="22dp"
+        android:layout_width="192dp"
+        android:layout_height="21dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:background="@color/sky_blue"
@@ -163,7 +163,7 @@
         android:textColor="@color/mid_gray"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/InputPassword"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="@+id/InputPassword"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -203,8 +203,8 @@
         android:layout_marginTop="32dp"
         android:text="아이디"
         android:textColor="@color/dark_gray"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.461"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/InputName" />
 
