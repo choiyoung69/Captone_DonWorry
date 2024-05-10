@@ -2,10 +2,17 @@ package com.example.donworry;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.android.volley.Response;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Sign_Up extends AppCompatActivity {
 
@@ -13,7 +20,7 @@ public class Sign_Up extends AppCompatActivity {
     private Button signUPBtn;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { // 액티비티 시작시 처음으로 실행되는 생명주기
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
@@ -36,8 +43,28 @@ public class Sign_Up extends AppCompatActivity {
                 String userRePassword = InputRePassword.getText().toString();
                 String userPhone = InputPhone.getText().toString();
 
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+                            if(success) { // 회원 등록에 성공한 경우
+                                Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Sign_Up.this, Log_In.class);
+                                startActivity(intent);
+                            } else { // 회원 등록에 실패한 경우
+                                Toast.makeText(getApplicationContext(), "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
 
-                // jason object 필요
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                };
+
+
             }
         });
 
