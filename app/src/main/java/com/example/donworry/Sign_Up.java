@@ -36,6 +36,10 @@ public class Sign_Up extends AppCompatActivity {
         signUPBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Sign_Up.this, Log_In.class);
+                startActivity(intent);
+
+                /*
                 //editText에 현재 입력되어 있는 값을 가져온다.
                 String userName = InputName.getText().toString();
                 String userID = InputID.getText().toString();
@@ -62,7 +66,7 @@ public class Sign_Up extends AppCompatActivity {
                             throw new RuntimeException(e);
                         }
                     }
-                };
+                };*/
 
 
             }
